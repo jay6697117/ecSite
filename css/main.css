@@ -1,0 +1,365 @@
+/*************** 初始化样式 ***************/
+* {
+    /* 清除默认内外边距 */
+    margin: 0px;
+    padding: 0px;
+
+    /* 从边框开始计算元素宽高 */
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    box-sizing: border-box;
+
+    /* 柔和颜色改变 */
+    -webkit-transition: 200ms;
+    -moz-transition: 200ms;
+    -ms-transition: 200ms;
+    -o-transition: 200ms;
+    transition: 200ms;
+}
+
+html,
+body {
+    /* 字体 */
+    font-size: 14px;
+    /* 颜色 */
+    color: #444;
+    /* 统一行高 */
+    line-height: 1.7;
+    /* 统一背景颜色 */
+    background-color: #f9f9f9;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+/**************** 结束 ****************/
+
+/**************** 容器 ****************/
+.container {
+    display: block;
+    max-width: 80%;
+    margin: 0 auto;
+}
+/**************** 结束 ****************/
+
+/************** 添加浮动 **************/
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+/**************** 结束 ****************/
+
+/*************** 清除浮动 ***************/
+.clear-float:before,
+.clear-float:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+.clear-float {
+    /* 兼容IE浏览器 */
+    *zoom: 1;
+}
+/**************** 结束 ****************/
+
+/************ 分栏网格布局 ************/
+.col-1,
+.col-2,
+.col-3,
+.col-4,
+.col-5,
+.col-6,
+.col-7,
+.col-8,
+.col-9 {
+    display: block;
+    position: relative;
+    min-width: 1px;
+    float: left;
+}
+
+.col-1 {
+    width: 10%;
+}
+.col-2 {
+    width: 20%;
+}
+.col-3 {
+    width: 30%;
+}
+.col-4 {
+    width: 40%;
+}
+.col-5 {
+    width: 50%;
+}
+.col-6 {
+    width: 60%;
+}
+.col-7 {
+    width: 70%;
+}
+.col-8 {
+    width: 80%;
+}
+.col-9 {
+    width: 90%;
+}
+/**************** 结束 ****************/
+
+/* 从上往下开始设置样式 */
+
+.top-nav {
+    background-color: #eee;
+}
+
+.top-nav .item {
+    display: inline-block;
+    padding: 6px 20px;
+    color: #555;
+}
+
+.top-nav .item:hover {
+    background-color: #555;
+    color: #fff;
+}
+
+.header {
+    padding: 20px 0px;
+}
+
+.header .logo {
+    height: 60px;
+    background-image: url(../img/logo.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.header .search-bar {
+    border: 1px solid #dd182b;
+    background-color: #dd182b;
+}
+
+.header .search-bar input,
+.header .search-bar button {
+    outline: none;
+    border: none;
+    padding: 8px 10px;
+    font-size: 18px;
+}
+
+.header .search-bar input {
+    display: inline-block;
+    width: 80%;
+}
+
+.header .search-bar input:focus {
+    box-shadow: 0 0 2px 2px rgba(221, 24, 43, 0.3) inset;
+}
+
+.header .search-bar button {
+    display: inline-block;
+    width: 20%;
+    background-color: #dd182b;
+    color: #ffffff;
+}
+.header .search-bar button:hover {
+    background-color: #b4182b;
+}
+
+.header .search-bar,
+.header .cart {
+    top: 11px;
+}
+
+.header .cart a {
+    margin-left: 10px;
+    text-align: center;
+    border: 1px solid #cacaca;
+    display: block;
+    padding: 6.5px;
+    color: #dd182b;
+    background-color: #fff;
+}
+
+.header .cart a:hover {
+    background-color: #dfdfdf;
+}
+
+.main-sale .cat {
+    overflow: auto;
+    height: 100%;
+    background-color: #6e6568;
+    color: #fff;
+}
+
+.main-sale .cat .item {
+    height: 10%;
+    padding: 18.5px 20px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.main-sale .cat .item:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+/***************************--start-- 主推销图片展示栏 --start--***************************/
+.main-sale {
+    height: 600px;
+    margin-bottom: 20px;
+}
+.main-sale .total-img {
+    height: 100%;
+}
+
+.main-sale .total-img .slider-img {
+    width: 100%;
+    height: 60%;
+}
+
+.main-sale .total-img .slider-img img {
+    width: 100%;
+    height: 100%;
+}
+
+.main-sale .total-img .sub-img {
+    width: 100%;
+    height: 40%;
+}
+
+.main-sale .total-img .sub-img .col-5 {
+    height: 100%;
+}
+
+.main-sale .total-img .sub-img .col-5 img {
+    width: 100%;
+    height: 100%;
+}
+
+/************************--over-- 主推销图片展示栏 --over--***************************/
+.main-sale .info {
+    overflow: auto;
+    height: 100%;
+    padding: 10px;
+    font-family: Helvetica, sans-serif;
+    background-color: #fff;
+    color: #888;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.main-sale .info .auth .avatar {
+    width: 50px;
+    height: 50px;
+    background-color: #ccc;
+    border-radius: 50%;
+    float: left;
+}
+
+.main-sale .info .auth .welcom-text {
+    line-height: 50px;
+    margin-left: 60px;
+    font-weight: 700;
+}
+
+.main-sale .info .anno .title {
+    font-size: 18px;
+    font-weight: 700;
+    text-align: center;
+    padding: 5px;
+}
+
+.main-sale .info .anno .content {
+    text-align: justify;
+    text-indent: 2em;
+}
+
+.cat-sale {
+    padding: 10px 0px;
+}
+
+.cat-sale .sale-title {
+    padding: 0px 5px;
+}
+.cat-sale .sale-title .sale-title-icon {
+    width: 10px;
+    height: 37px;
+    background-color: #dd182b;
+    float: left;
+    margin-right: 5px;
+    border-radius: 15%;
+}
+.cat-sale .sale-title .sale-title-text {
+    font-size: 22px;
+    line-height: 37px;
+}
+
+.cat-sale .sale-content .item {
+    padding: 5px;
+}
+.cat-sale .sale-content .item .card {
+    height: 300px;
+    background-color: #ccc;
+    border-radius: 2%;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.footer {
+    text-align: center;
+    margin-top: 20px;
+    padding: 30px 0;
+    color: #999;
+    background-color: #eee;
+}
+.footer a {
+    display: inline-block;
+    color: #999;
+    padding: 0 20px;
+}
+
+.footer a:hover {
+    background-color: #555;
+    color: #fff;
+}
+
+.footer .copyright {
+    padding: 10px 0;
+}
+
+/*********************--start-- 首页登录注册按钮 --start--*********************/
+.main-sale .info .auth .login-reg {
+    padding: 30px 0;
+}
+
+.main-sale .info .auth .login-reg button {
+    outline: none;
+    padding: 2% 10%;
+    font-weight: 500;
+    color: #888;
+    background: #eee;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+    border: 1px solid #aaa;
+}
+
+.main-sale .info .auth .login-reg button:hover {
+    background: #cacaca;
+}
+.main-sale .info .auth .login-reg .login-btn {
+    float: left;
+}
+
+.main-sale .info .auth .login-reg .reg-btn {
+    float: right;
+}
+/********************--over-- 首页登录注册按钮 --over--************************/
